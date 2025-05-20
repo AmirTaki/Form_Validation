@@ -41,3 +41,19 @@ const validatePhone = () => {
     phoneError.innerHTML = '<i class="bi bi-check-circle-fill"></i>'
     return true
 }
+
+const  validateEmail = () => {
+    var email = document.getElementById("contact-email").value
+
+    if (email.lenght == 0) {
+        emailError.innerHTML = "Email is required"
+        return false
+    }
+    
+    if (!email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)){
+        emailError.innerHTML = "Email Invalid"
+        return false
+    }
+    emailError.innerHTML = '<i class="bi bi-check-circle-fill"></i>'
+    return true
+}
