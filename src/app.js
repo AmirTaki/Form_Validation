@@ -72,3 +72,13 @@ const validateMessage = () => {
     return true
 
 }
+
+
+
+const validateForm = ()=> {
+    
+    if (!validateName() || !validateEmail() || !validateMessage() || !validatePhone()){
+        submitError.innerHTML = "please fix error to submit"
+        return false
+    }
+}
