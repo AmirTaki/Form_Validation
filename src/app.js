@@ -78,7 +78,9 @@ const validateMessage = () => {
 const validateForm = ()=> {
     
     if (!validateName() || !validateEmail() || !validateMessage() || !validatePhone()){
+        submitError.style.display = 'block'
         submitError.innerHTML = "please fix error to submit"
+        setTimeout(function(){submitError.style.display = 'none'}, 3000)
         return false
     }
 }
