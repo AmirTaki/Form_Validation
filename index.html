@@ -32,8 +32,8 @@
           
             <div class="input-group">
                 <label for="">Your Message</label>
-                <textarea rows = "5" placeholder="Enter your message"></textarea>
-                <span id = "messate-error"></span>
+                <textarea rows = "5" placeholder="Enter your message" minlength="30" id = "contact-message" onkeyup="validateMessage()"></textarea>
+                <span id = "message-error"></span>
             </div>
 
             <button>Submit</button>

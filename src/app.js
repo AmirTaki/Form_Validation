@@ -57,3 +57,18 @@ const  validateEmail = () => {
     emailError.innerHTML = '<i class="bi bi-check-circle-fill"></i>'
     return true
 }
+
+const validateMessage = () => {
+    // var message = document.getElementById("contact-message").value
+    var message = document.querySelector('textarea').value
+    var required = 30
+    var left = required - message.length
+
+    if (left > 0) {
+        messageError.innerHTML = left + 'more characters required'
+        return false
+    }
+    messageError.innerHTML = '<i class="bi bi-check-circle-fill"></i>'
+    return true
+
+}
