@@ -23,7 +23,7 @@
     position: relative;
 }
 
-.container .bi-send{
+.container .bi-envelope-at-fill{
     position: absolute;
     top : 0;
     left : 50%;
@@ -60,4 +60,16 @@
 
 ::placeholder {
     font-size: 14px;
+}
+
+form button {
+    background: #141a34;
+    color :#fff;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 10px;
+    padding: 10px 40px;
+    outline: 0;
 }
