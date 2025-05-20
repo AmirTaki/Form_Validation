@@ -15,8 +15,29 @@ const validateName = () => {
         nameError.innerHTML = "Write full name"
         return false
     }
-    nameError.innerHTML = "valid"
+    nameError.innerHTML = '<i class="bi bi-check-circle-fill"></i>'
     return true
+}
+
+const validatePhone = () => {
+    var phone = document.getElementById('contact-phone').value
+
+    if (phone.lenght == 0){
+        phoneError.innerHTML = "Phone no is required"
+        return false
+    }
+
+    if (phone.lenght < 10 && phone.lenght > 10){
+        phoneError.innerHTML = "Phone no should be 10 digits"
+        return false
+    }
+
+    if(!phone.match(/^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/)){
+        phoneError.innerHTML = "Only digits please."
+        return false
+    }
 
 
+    phoneError.innerHTML = '<i class="bi bi-check-circle-fill"></i>'
+    return true
 }
