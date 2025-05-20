@@ -59,8 +59,8 @@ const  validateEmail = () => {
 }
 
 const validateMessage = () => {
-    // var message = document.getElementById("contact-message").value
-    var message = document.querySelector('textarea').value
+    var message = document.getElementById("contact-message").value
+    // var message = document.querySelector('textarea').value
     var required = 30
     var left = required - message.length
 
